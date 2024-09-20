@@ -27,3 +27,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+
+export VAULT_ADDR="https://aws-hcp-vault-cluster-public-vault-3f03e181.da802f7c.z1.hashicorp.cloud:8200";
+export VAULT_NAMESPACE="admin"
+export VAULT_TOKEN=hvs.CAESIBJxSr3_c9cH5BlNdHABhXkPZzyKrQ13fexNFiz1y9abGicKImh2cy55Nm9zdWlGc0RqMWlxY2pxY2xqREk2UEwuZWtsVk8Q7gI
