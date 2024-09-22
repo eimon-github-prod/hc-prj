@@ -82,7 +82,7 @@ resource "vault_jwt_auth_backend_role" "example" {
   role_name       = "tfc-admin-role"
   token_policies  = [vault_policy.main.name]
 
-  bound_audiences = ["var.workload.identity"]
+  bound_audiences = ["vault.workload.identity"]
   bound_claims_type = "glob"
   bound_claims = {
     sub = "organization:git-tfc-hcp-vault-clusters:project:git-tfc-hcp-vault-cluster-project:workspace:*:run_phase:*"
