@@ -18,3 +18,8 @@ resource "vault_aws_secret_backend_role" "role" {
   credential_type = "iam_user"
   policy_arns = ["arn:aws:iam::aws:policy/AdministratorAccess"]
 }
+# generally, these blocks would be in a different module
+data "vault_aws_access_credentials" "creds" {
+  backend = vault_aws_secret_backend.aws.path
+  role    = vault_aws_secret_backend_role.role.name
+}
